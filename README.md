@@ -2,77 +2,77 @@
 
 
 
-\# RabbitMQ + Flask + Threading Demo
+# RabbitMQ + Flask + Threading Demo
 
 
 
-\## Overview
+## Overview
 
 This project demonstrates:
 
-\- REST API using Flask
+- REST API using Flask
 
-\- RabbitMQ messaging (Producer/Consumer)
+- RabbitMQ messaging (Producer/Consumer)
 
-\- Multi-threaded requests
+- Multi-threaded requests
 
-\- Pytest automation
+- Pytest automation
 
 
 
-\## Workflow
+## Workflow
 
 Client → API → RabbitMQ → Consumer → Processing
 
 
 
-\## Setup
+## Setup
 
 
 
-1\. Install dependencies:
+1. Install dependencies:
 
 pip install -r requirements.txt
 
 
 
-2\. Start RabbitMQ:
+2. Start RabbitMQ:
 
 rabbitmq-server
 
 
 
-3\. Run Consumer:
+3. Run Consumer:
 
 python consumer.py
 
 
 
-4\. Run API:
+4. Run API:
 
 python api.py
 
 
 
-5\. Send message:
+5. Send message:
 
 Invoke-RestMethod -Method POST -Uri http://127.0.0.1:5000/send -Headers @{"Content-Type"="application/json"} -Body '{"message":"Hello"}'
 
 
 
-6\. Run tests:
+6. Run tests:
 
 pytest -v
 
 
 
-\## Features
+## Features
 
-\- Durable queues
+- Durable queues
 
-\- Persistent messages
+- Persistent messages
 
-\- Thread-safe producer
+- Thread-safe producer
 
-\- Concurrent API testing
+- Concurrent API testing
 
